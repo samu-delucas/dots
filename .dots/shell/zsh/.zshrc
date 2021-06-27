@@ -19,7 +19,7 @@ if [[ -r $ZDOTDIR/.zsh_completition ]]; then
 fi
 
 if [[ -r $ZDOTDIR/../aliases.sh ]]; then
-    source $ZDOTDIR/../.aliases.sh
+    source $ZDOTDIR/../aliases.sh
 fi
 
 # End of lines configured by ME
