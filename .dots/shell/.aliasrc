@@ -9,3 +9,6 @@ alias gp='git push'
 alias dotscfg='/usr/bin/git --git-dir=$HOME/.dotscfg/ --work-tree=$HOME'
 alias vim='nvim'
 alias pacman='sudo pacman --color=auto'
+
+# Use $XINITRC variable if file exists
+[ -f "$XINITRC" ] && alias startx="startx $XINITRC"
