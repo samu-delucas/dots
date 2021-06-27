@@ -21,8 +21,17 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Complete also hidden files
+# 'setopt globdots' would also work, but it shows dotfiles everywhere
+_comp_options+=(globdots)
+
 # This line makes it so the 'make' command is completed
 # only with the targets for the makefile, not with the
 # files in that same directory.
 # Does not work if there is no makefile (duh...)
 zstyle ':completion:*:*:make:*' tag-order 'targets'
+
+# Correct completion in git
+# https://dev.to/oliverspryn/adding-git-completion-to-zsh-26id
+zstyle ':completion:*:*:git:*' script $DOTSDIR/shell/zsh/git-completion.bash
+fpath=($DOTSDIR/shell/zsh $fpath)
