@@ -7,6 +7,8 @@ blah blah blah
 ## Dotfiles
 This repo contains dotfiles for the following applications
 - nvim
+- qtile
+- xorg
 - zsh
 
 ## Useful links
