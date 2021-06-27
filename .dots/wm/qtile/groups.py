@@ -5,23 +5,31 @@
 #
 
 from libqtile.command import lazy
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Match
 from keys import mod, keys
 
-# TODO: Revisar esta parte!!!!!!!!!!!!!!!!!!!!!!!!!!
-groups = [Group(i) for i in "123456789"]
+# Run this command to find the WM_CLASS of a window:
+#   xprop | grep WM_CLASS | awk '{print $4}'
+#
+# For more icons see https://www.nerdfonts.com/cheat-sheet
+groups = [
+    Group('term', label='  ', init=True, persist=True,
+          matches=[Match(wm_class=['Alacritty'])], position=1),
+    Group('browser', label='  ', init=True, persist=True,
+          matches=[Match(wm_class=['firefox'])], position=2),
+    Group('discord', label=' ﭮ ', init=True, persist=True,
+          matches=[Match(wm_class=['discord'])], position=3),
+    Group('misc', label='  ')
+]
 
-for i in groups:
+for i, group in enumerate(groups):
+    current_key = str(i + 1)
     keys.extend([
-        # mod1 + letter of group = switch to group
-        Key([mod], i.name, lazy.group[i.name].toscreen(),
-            desc="Switch to group {}".format(i.name)),
+        # Switch to group N. Here toggle=False prevents the group from being toggle
+        # with the last used it's already on the screen
+        Key([mod], current_key, lazy.group[group.name].toscreen(toggle=False)),
 
-        # mod1 + shift + letter of group = switch to & move focused window to group
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name, switch_group=True),
-            desc="Switch to & move focused window to group {}".format(i.name)),
-        # Or, use below if you prefer not to switch to that group.
-        # # mod1 + shift + letter of group = move focused window to group
-        # Key([mod, "shift"], i.name, lazy.window.togroup(i.name),
-        #     desc="move focused window to group {}".format(i.name)),
+        # Send window to group N
+        Key([mod, "shift"], current_key, lazy.window.togroup(group.name))
+        # Key([mod, "shift"], current_key, lazy.window.togroup(group.name, switch_group=True))
     ])

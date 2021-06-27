@@ -1,34 +1,11 @@
 #
 # .dots/wm/qtile/screens.py
 #
-# Screens config (mainly the bar config)
+# Screens config
 #
 
-from libqtile import bar, widget
+from libqtile import bar
 from libqtile.config import Screen
+from widgets import widgets
 
-screens = [
-    Screen(
-        bottom=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("MY config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn",
-                               foreground="#d75f5f"),
-                widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
-                widget.QuickExit(),
-            ],
-            24,
-        ),
-    ),
-]
+screens = [Screen(top=bar.Bar(widgets, 20, opacity=0.95))]

@@ -21,8 +21,6 @@ dgroups_app_groups = []     # Useful! TODO: change it!
 # TODO: floating layout (separate file)
 focus_on_window_activation = "smart"
 follow_mouse_focus = False
-widget_defaults = dict(font='sans', fontsize=12, padding=3)  # Default
-extension_defaults = widget_defaults.copy()  # Default
 reconfigure_screens = True  # Default
 auto_minimize = True  # Default
 
