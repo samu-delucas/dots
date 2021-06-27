@@ -6,7 +6,7 @@ alias g='git'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
-alias dotscfg='/usr/bin/git --git-dir=$HOME/.dotscfg/ --work-tree=$HOME'
+alias .git='/usr/bin/git --git-dir=$HOME/.dotsrepo/ --work-tree=$HOME'
 alias vim='nvim'
 alias pacman='sudo pacman --color=auto'
 
