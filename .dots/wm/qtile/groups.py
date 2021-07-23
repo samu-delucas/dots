@@ -20,7 +20,7 @@ groups = [
     Group('browser', label='', position=2,
           matches=[Match(wm_class=['firefox'])]),
     Group('discord', label='ﭮ', position=3,
-          matches=[Match(wm_class=['discord'])]),
+          matches=[Match(wm_class=['lightcord'])]),
     Group('misc',    label='', position=4)
     # matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
     # matches=[Match(wm_class=[re.compile('!firefox|!discord|!Alacritty')])])

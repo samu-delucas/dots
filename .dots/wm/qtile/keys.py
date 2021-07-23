@@ -20,8 +20,10 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod, "control"], "q", lazy.shutdown()),
 
     # Spawn applications
+
     ([mod], "Return",   lazy.spawn("alacritty")),
     ([mod], "b",   lazy.spawn("firefox")),
+    ([mod], "d",   lazy.spawn("lightcord")),
 
     # Switch between layouts
     ([mod],          "Tab",    lazy.next_layout()),
