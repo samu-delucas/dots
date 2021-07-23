@@ -22,4 +22,8 @@ if [[ -r $ZDOTDIR/../aliases.sh ]]; then
     source $ZDOTDIR/../aliases.sh
 fi
 
+if [[ -r $ZDOTDIR/theme ]]; then
+    source $ZDOTDIR/theme
+fi
+
 # End of lines configured by ME

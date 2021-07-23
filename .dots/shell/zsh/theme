@@ -1,0 +1,17 @@
+# More info on PS1, PS2, etc. here:
+# https://unix.stackexchange.com/questions/193659/in-which-situations-are-ps2-ps3-ps4-used-as-the-prompt
+
+PSLINE1='┌─╴%B%F{#F3F362}%n%f%b in %B%F{#F3F362}%~%f%b'
+PSLINE2='└╴%(!.#.$) '
+
+PS1=$PSLINE1$'\n'$PSLINE2
+
+# Print a new line between commands, except on the first line
+# It works well with C-l, but fails when using the "clear" command
+function precmd() {
+    if [ -z "$NEW_LINE_BEFORE_PROMPT" ]; then
+        NEW_LINE_BEFORE_PROMPT=1
+    elif [ "$NEW_LINE_BEFORE_PROMPT" -eq 1 ]; then
+        echo ""
+    fi
+}
