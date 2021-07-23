@@ -8,4 +8,4 @@ from libqtile import bar
 from libqtile.config import Screen
 from widgets import widgets
 
-screens = [Screen(top=bar.Bar(widgets, 20, opacity=0.95))]
+screens = [Screen(top=bar.Bar(widgets, 30, opacity=0.95))]

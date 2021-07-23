@@ -7,26 +7,29 @@
 from libqtile.command import lazy
 from libqtile.config import Key, Group, Match
 from keys import mod, keys
+import re
 
 # Run this command to find the WM_CLASS of a window:
 #   xprop | grep WM_CLASS | awk '{print $4}'
 #
 # For more icons see https://www.nerdfonts.com/cheat-sheet
 groups = [
-    Group('term', label='  ', init=True, persist=True,
-          matches=[Match(wm_class=['Alacritty'])], position=1),
-    Group('browser', label='  ', init=True, persist=True,
-          matches=[Match(wm_class=['firefox'])], position=2),
-    Group('discord', label=' ﭮ ', init=True, persist=True,
-          matches=[Match(wm_class=['discord'])], position=3),
-    Group('misc', label='  ')
+    # Group('term', label='  ',
+    #       matches=[Match(wm_class=['Alacritty'])], position=1),
+    Group('term',    label='', position=1),
+    Group('browser', label='', position=2,
+          matches=[Match(wm_class=['firefox'])]),
+    Group('discord', label='ﭮ', position=3,
+          matches=[Match(wm_class=['discord'])]),
+    Group('misc',    label='', position=4)
+    # matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
+    # matches=[Match(wm_class=[re.compile('!firefox|!discord|!Alacritty')])])
 ]
 
 for i, group in enumerate(groups):
     current_key = str(i + 1)
     keys.extend([
-        # Switch to group N. Here toggle=False prevents the group from being toggle
-        # with the last used it's already on the screen
+        # Switch to group N
         Key([mod], current_key, lazy.group[group.name].toscreen(toggle=False)),
 
         # Send window to group N

@@ -24,8 +24,9 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod], "b",   lazy.spawn("firefox")),
 
     # Switch between layouts
-    ([mod],          "Tab", lazy.next_layout()),
-    ([mod, "shift"], "Tab", lazy.prev_layout()),
+    ([mod],          "Tab",    lazy.next_layout()),
+    ([mod, "shift"], "Tab",    lazy.prev_layout()),
+    ([mod, "shift"], "Return", lazy.layout.toggle_split()),
 
     # Switch between windows
     ([mod], "h",     lazy.layout.left()),
