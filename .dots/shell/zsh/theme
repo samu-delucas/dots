@@ -1,8 +1,8 @@
 # More info on PS1, PS2, etc. here:
 # https://unix.stackexchange.com/questions/193659/in-which-situations-are-ps2-ps3-ps4-used-as-the-prompt
 
-PSLINE1='┌─╴%B%F{#F3F362}%n%f%b in %B%F{#F3F362}%~%f%b'
-PSLINE2='└╴%(!.#.$) '
+PSLINE1='┌─ %B%F{#F3F362}%n%f%b in %B%F{#F3F362}%~%f%b'
+PSLINE2='└ %(!.#.$) '
 
 PS1=$PSLINE1$'\n'$PSLINE2
 

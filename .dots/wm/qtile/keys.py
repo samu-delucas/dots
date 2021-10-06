@@ -24,6 +24,10 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod], "Return",   lazy.spawn("alacritty")),
     ([mod], "b",   lazy.spawn("firefox")),
     ([mod], "d",   lazy.spawn("lightcord")),
+    ([mod], "f",   lazy.spawn("thunar")),
+    ([mod], "g",   lazy.spawn("lutris")),
+    ([mod], "m",   lazy.spawn("freezer")),
+    ([mod], "z",   lazy.spawn("zathura")),
 
     # Switch between layouts
     ([mod],          "Tab",    lazy.next_layout()),

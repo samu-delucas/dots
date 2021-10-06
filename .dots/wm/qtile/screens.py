@@ -8,4 +8,6 @@ from libqtile import bar
 from libqtile.config import Screen
 from widgets import widgets
 
-screens = [Screen(top=bar.Bar(widgets, 30, opacity=0.95))]
+screens = [Screen(wallpaper="~/wallpapers/016.jpg",
+                  wallpaper_mode="fill",
+                  top=bar.Bar(widgets, size=35, opacity=1.0))]

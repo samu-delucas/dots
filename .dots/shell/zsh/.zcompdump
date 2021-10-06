@@ -1,4 +1,4 @@
-#files: 775	version: 5.8
+#files: 780	version: 5.8
 
 _comps=(
 '-' '_precommand'
@@ -78,6 +78,7 @@ _comps=(
 'base64' '_base64'
 'basename' '_basename'
 'bash' '_bash'
+'bat' '_bat'
 'batch' '_at'
 'baz' '_baz'
 'beep' '_beep'
@@ -119,6 +120,7 @@ _comps=(
 'bunzip2' '_bzip2'
 'burst' '_mh'
 'busctl' '_busctl'
+'bwrap' '_bwrap'
 'bzcat' '_bzip2'
 'bzegrep' '_grep'
 'bzfgrep' '_grep'
@@ -130,6 +132,7 @@ _comps=(
 'cabal' '_cabal'
 'cal' '_cal'
 'calendar' '_calendar'
+'cargo' '_cargo'
 'cat' '_cat'
 'catchsegv' '_precommand'
 'cc' '_gcc'
@@ -911,6 +914,7 @@ _comps=(
 'ping6' '_ping'
 'pkgadd' '_pkgadd'
 'pkg-config' '_pkg-config'
+'pkgfile' '_pkgfile'
 'pkginfo' '_pkginfo'
 'pkgrm' '_pkgrm'
 'pkill' '_pgrep'
@@ -1455,6 +1459,7 @@ _comps=(
 'ypxfr' '_yp'
 'ytalk' '_other_accounts'
 'zargs' '_zargs'
+'zathura' '_zathura'
 'zcalc' '_zcalc'
 '-zcalc-line-' '_zcalc_line'
 'zcat' '_zcat'
@@ -1611,13 +1616,14 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _alacritty _bootctl _busctl _coredumpctl _curl \
-            _hostnamectl _journalctl _kernel-install _libinput _localectl \
-            _loginctl _machinectl _mkinitcpio _networkctl _pacman \
-            _pulseaudio _resolvectl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes \
-            _sd_unit_files _systemctl _systemd _systemd-analyze _systemd-delta \
-            _systemd-inhibit _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles \
-            _timedatectl _tmatrix _trizen _udevadm _cdr \
+autoload -Uz _alacritty _bat _bootctl _busctl _bwrap \
+            _cargo _coredumpctl _curl _hostnamectl _journalctl \
+            _kernel-install _libinput _localectl _loginctl _machinectl \
+            _mkinitcpio _networkctl _pacman _pkgfile _pulseaudio \
+            _resolvectl _sd_hosts_or_user_at_host _sd_machines _sd_outputmodes _sd_unit_files \
+            _systemctl _systemd _systemd-analyze _systemd-delta _systemd-inhibit \
+            _systemd-nspawn _systemd-path _systemd-run _systemd-tmpfiles _timedatectl \
+            _tmatrix _trizen _udevadm _zathura _cdr \
             _all_labels _all_matches _alternative _approximate _arg_compile \
             _arguments _bash_completions _cache_invalid _call_function _combination \
             _complete _complete_debug _complete_help _complete_help_generic _complete_tag \

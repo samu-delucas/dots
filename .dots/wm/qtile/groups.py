@@ -16,12 +16,16 @@ import re
 groups = [
     # Group('term', label='  ',
     #       matches=[Match(wm_class=['Alacritty'])], position=1),
-    Group('term',    label='', position=1),
-    Group('browser', label='', position=2,
+    Group('browser', label='WWW', position=1,
           matches=[Match(wm_class=['firefox'])]),
-    Group('discord', label='ﭮ', position=3,
-          matches=[Match(wm_class=['lightcord'])]),
-    Group('misc',    label='', position=4)
+    Group('term',    label='DEV', position=2),
+    Group('chat', label='CHAT', position=3, matches=[
+          Match(wm_class=['lightcord', 'teams-for-linux', 'Signal'])]),
+    Group('misc',    label='MISC', position=4),
+    Group('music', label='MUSIC', position=5,
+          matches=[Match(wm_class=['freezer'])]),
+    Group('games', label='GAMES', position=6,
+          matches=[Match(wm_class=['Lutris'])])
     # matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
     # matches=[Match(wm_class=[re.compile('!firefox|!discord|!Alacritty')])])
 ]

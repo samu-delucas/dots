@@ -13,7 +13,7 @@ set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
+" set conceallevel=0                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
@@ -22,11 +22,11 @@ set smartindent                         " Makes indenting smart
 set autoindent                          " Good auto indent
 set laststatus=0                        " Always display the status line
 set number                            	" Line numbers
-set relativenumber											" The line in which the cursor is will be line number 0
-" set cursorline                          " Enable highlighting of the current line
+" set relativenumber											" The line in which the cursor is will be line number 0
+set cursorline                          " Enable highlighting of the current line
 set nohlsearch                          " search doesn't remain highlighted after done searching
 set incsearch                           " search incrementally as you type
-set scrolloff=8                         " start scrolling when you are 8 lines away from the top/bottom
+set scrolloff=2                         " start scrolling when you are 2 lines away from the top/bottom
 set noerrorbells                        " annoying beeps/flashes with error msgs
 set background=dark                     " tell vim what the background color looks like
 set showtabline=2                       " Always show tabs

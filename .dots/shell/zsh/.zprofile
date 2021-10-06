@@ -8,4 +8,8 @@
 # sessions or set session-wide env variables
 #
 
-#echo "zprofile working"
+# Autostart X at login
+# more info at https://wiki.archlinux.org/title/Xinit#Autostart_X_at_login
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec startx $XINITRC
+fi

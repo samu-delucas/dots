@@ -4,6 +4,8 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias la='ls -A'
 alias ll='ls -lA'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 alias grep='grep --color=auto'
 
@@ -13,7 +15,7 @@ alias gc='git commit -m'
 alias gp='git push'
 alias .git='/usr/bin/git --git-dir=$HOME/.dotsrepo/ --work-tree=$HOME'
 
-alias vim='nvim'
+alias nv='nvim'
 
 alias pacman='sudo pacman --color=auto'
 alias trizen='trizen --color=auto --noedit'
@@ -23,6 +25,10 @@ alias sp='\trizen -Ss --color=auto'
 
 alias vpnuam='sudo vpnc uam'
 alias vpnuamoff='sudo vpnc-disconnect'
+alias neofetch='neofetch --config $HOME/.dots/neofetch/config.conf'
+
+alias discord='lightcord'
+alias teams='teams-for-linux'
 
 # DOESN'T WORK PROPERLY
 # Clear and reset wont have \n on the top of the terminal
