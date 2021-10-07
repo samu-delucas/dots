@@ -33,7 +33,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Themes
     " Plug 'ayu-theme/ayu-vim'
     " Plug 'morhetz/gruvbox'
-    Plug 'joshdick/onedark.vim'
+    " Plug 'joshdick/onedark.vim'
+    Plug 'embark-theme/vim', {'as': 'embark'}
 
     " Git
     Plug 'mhinz/vim-signify'        " show changes with +,-,etc
