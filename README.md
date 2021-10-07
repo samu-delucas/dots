@@ -14,6 +14,7 @@ This repo contains dotfiles for the following applications
 - qtile
 - xorg
 - zsh
+- neofetch
 
 ## Useful links
 
