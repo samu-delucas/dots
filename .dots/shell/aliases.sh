@@ -23,8 +23,12 @@ alias syu='pacman -Syu'
 alias tsyu='\trizen -Syu'
 alias sp='\trizen -Ss --color=auto'
 
+alias ip='ip -color'
+
 alias vpnuam='sudo vpnc uam'
 alias vpnuamoff='sudo vpnc-disconnect'
+alias vmplayer='sudo systemctl start vmware-usbarbitrator.path vmware-networks.path; sudo vmplayer'
+
 alias neofetch='neofetch --config $HOME/.dots/neofetch/config.conf'
 
 alias discord='lightcord'

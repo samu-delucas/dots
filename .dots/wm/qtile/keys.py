@@ -26,7 +26,7 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod], "d",   lazy.spawn("lightcord")),
     ([mod], "f",   lazy.spawn("thunar")),
     ([mod], "g",   lazy.spawn("lutris")),
-    ([mod], "m",   lazy.spawn("freezer")),
+    ([mod], "m",   lazy.spawn("spotblock"), lazy.spawn("spotify")),
     ([mod], "z",   lazy.spawn("zathura")),
 
     # Switch between layouts

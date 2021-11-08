@@ -27,7 +27,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     let g:UltiSnipsJumpForwardTrigger = '<tab>'
     let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
     " Which key
-    " Plug 'liuchengxu/vim-which-key'   
+    Plug 'liuchengxu/vim-which-key'   
     
 
     " Themes
@@ -40,7 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-signify'        " show changes with +,-,etc
 
     " Plugin para R 
-    Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
+    " Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
     " Plugin para LaTex
     Plug 'lervag/vimtex'
 

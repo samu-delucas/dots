@@ -23,7 +23,7 @@ groups = [
           Match(wm_class=['lightcord', 'teams-for-linux', 'Signal'])]),
     Group('misc',    label='MISC', position=4),
     Group('music', label='MUSIC', position=5,
-          matches=[Match(wm_class=['freezer'])]),
+          matches=[Match(wm_class=['Spotify'])]),
     Group('games', label='GAMES', position=6,
           matches=[Match(wm_class=['Lutris'])])
     # matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
