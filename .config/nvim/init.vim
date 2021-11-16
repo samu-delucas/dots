@@ -11,6 +11,6 @@ source $HOME/.config/nvim/themes/airline.vim
 " source $HOME/.config/nvim/plug-config/lightline.vim
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/signify.vim " git integration
-
+source $HOME/.config/nvim/plug-config/bufferline.vim
 " Latex
 source $HOME/.config/nvim/plug-config/vimtex.vim

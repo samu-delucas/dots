@@ -29,6 +29,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Which key
     Plug 'liuchengxu/vim-which-key'   
     
+    " Tabs/bufferline
+    Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
+    " Plug 'ryanoasis/vim-devicons' Icons without colours
+    Plug 'akinsho/bufferline.nvim'
 
     " Themes
     " Plug 'ayu-theme/ayu-vim'

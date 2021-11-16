@@ -1,4 +1,3 @@
-
 alias sudo='sudo '
 
 alias ls='ls --color=auto'
@@ -28,6 +27,8 @@ alias ip='ip -color'
 alias vpnuam='sudo vpnc uam'
 alias vpnuamoff='sudo vpnc-disconnect'
 alias vmplayer='sudo systemctl start vmware-usbarbitrator.path vmware-networks.path; sudo vmplayer'
+alias arqocluster='echo WGtTvzK; ssh -oHostKeyAlgorithms=+ssh-dss clusterArqo'
+alias arqoclusterscp='echo WGtTvzK; scp -oHostKeyAlgorithms=+ssh-dss'
 
 alias neofetch='neofetch --config $HOME/.dots/neofetch/config.conf'
 

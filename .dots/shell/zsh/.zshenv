@@ -10,3 +10,4 @@ export DOTSDIR=$HOME/.dots
 export XINITRC=$DOTSDIR/wm/X11/xinitrc
 export APUNTESDIR=$HOME/apuntes-latex
 export TEXINPUTS=$HOME/apuntes-latex/clases:$HOME/apuntes-latex/paquetes:
+export ALIASFILE=$DOTSDIR/shell/aliases.sh

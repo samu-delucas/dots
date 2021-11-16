@@ -48,3 +48,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 " Comment a line easily
 nnoremap <space>/ :Commentary<CR>
 vnoremap <space>/ :Commentary<CR>
+
+" BufferLinePick (Go to Buffer)
+nnoremap <silent> gb :BufferLinePick<CR>
+
