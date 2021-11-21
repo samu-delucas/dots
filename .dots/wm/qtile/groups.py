@@ -13,30 +13,56 @@ import re
 #   xprop | grep WM_CLASS | awk '{print $4}'
 #
 # For more icons see https://www.nerdfonts.com/cheat-sheet
+
+
+# matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
+# matches=[Match(wm_class=[re.compile('!firefox|!discord|!Alacritty')])])
+
 groups = [
     # Group('term', label='  ',
     #       matches=[Match(wm_class=['Alacritty'])], position=1),
-    Group('browser', label='WWW', position=1,
-          matches=[Match(wm_class=['firefox'])]),
-    Group('term',    label='DEV', position=2),
-    Group('chat', label='CHAT', position=3, matches=[
-          Match(wm_class=['lightcord', 'teams-for-linux', 'Signal'])]),
-    Group('misc',    label='MISC', position=4),
-    Group('music', label='MUSIC', position=5,
-          matches=[Match(wm_class=['Spotify'])]),
-    Group('games', label='GAMES', position=6,
-          matches=[Match(wm_class=['Lutris'])])
-    # matches=[Match(wm_class=[re.compile('^(?!.*Alacritty).*$')])])
-    # matches=[Match(wm_class=[re.compile('!firefox|!discord|!Alacritty')])])
+    Group('1',
+          label='',
+          matches=[Match(wm_class=['firefox'])]
+          ),
+    Group('2',
+          label=''
+          ),
+    Group('3',
+          label='',
+          matches=[Match(wm_class=['discord', 'teams-for-linux', 'Signal'])]
+          ),
+    Group('4',
+          label=''
+          ),
+    Group('5',
+          label='',
+          matches=[Match(wm_class=['Spotify'])]
+          ),
+    Group('6',
+          label='',
+          matches=[Match(wm_class=['Lutris'])]
+          ),
+    Group('7',
+          label=''
+          ),
+    Group('8',
+          label=''
+          ),
+    Group('9',
+          label=''
+          ),
+    Group('0',
+          label='',
+          )
 ]
 
-for i, group in enumerate(groups):
-    current_key = str(i + 1)
+for i in groups:
     keys.extend([
         # Switch to group N
-        Key([mod], current_key, lazy.group[group.name].toscreen(toggle=False)),
+        Key([mod], i.name, lazy.group[i.name].toscreen(toggle=False)),
 
         # Send window to group N
-        Key([mod, "shift"], current_key, lazy.window.togroup(group.name))
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
         # Key([mod, "shift"], current_key, lazy.window.togroup(group.name, switch_group=True))
     ])

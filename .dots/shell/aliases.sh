@@ -32,7 +32,6 @@ alias arqoclusterscp='echo WGtTvzK; scp -oHostKeyAlgorithms=+ssh-dss'
 
 alias neofetch='neofetch --config $HOME/.dots/neofetch/config.conf'
 
-alias discord='lightcord'
 alias teams='teams-for-linux'
 
 # DOESN'T WORK PROPERLY

@@ -23,7 +23,7 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
 
     ([mod], "Return",   lazy.spawn("alacritty")),
     ([mod], "b",   lazy.spawn("firefox")),
-    ([mod], "d",   lazy.spawn("lightcord")),
+    ([mod], "d",   lazy.spawn("discord")),
     ([mod], "f",   lazy.spawn("thunar")),
     ([mod], "g",   lazy.spawn("lutris")),
     ([mod], "m",   lazy.spawn("spotblock"), lazy.spawn("spotify")),
