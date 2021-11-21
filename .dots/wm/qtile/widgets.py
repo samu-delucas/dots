@@ -195,7 +195,7 @@ widgets = [
         fontsize=widgetFSize,
         format='{percent:2.0%}',
         update_interval=0.5,
-        low_percentage=0.9,
+        low_percentage=0.15,
     ),
     rightsep(4),
 

@@ -22,6 +22,9 @@ dgroups_app_groups = []     # Useful! TODO: change it!
 focus_on_window_activation = "smart"
 follow_mouse_focus = False
 reconfigure_screens = True  # Default
+
+# If things like steam games want to auto-minimize themselves when losing
+# focus, should we respect this or not?
 auto_minimize = True  # Default
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
