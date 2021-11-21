@@ -15,11 +15,11 @@ screens = [
         wallpaper_mode="fill",
         top=bar.Bar(
             widgets,    # in widgets.py
-            size=35,
+            size=24,
             background=colors[0],
             border_color=colors[0],
             border_width=colors[0],
-            margin=[10, 10, 0, 10],
+            margin=[5, 5, 0, 5],
         )
     )
 ]

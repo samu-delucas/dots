@@ -8,8 +8,8 @@ from libqtile import layout
 
 layouts = [
     layout.Columns(
-        margin=10,
-        margin_on_single=10,
+        margin=5,
+        margin_on_single=5,
         border_focus='#FBFBFB',
         border_focus_stack='#F9D002',
         border_normal='#111111',

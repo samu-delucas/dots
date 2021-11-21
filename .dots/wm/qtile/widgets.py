@@ -5,6 +5,9 @@ from colors import colors
 import os
 
 widgetFont = "Hack Nerd Font Mono"
+widgetFSize = 12
+sepFSize = 22
+
 
 def sep(pd=10, bg=0):
     return widget.Sep(
@@ -13,24 +16,28 @@ def sep(pd=10, bg=0):
         linewidth=0,
     )
 
+
 def leftsep(fg):
     return widget.TextBox(
-        text="\ue0b6",
-        fonts="Hack Nerd Font Mono",    # It is not widgetFont because it needs to be a nerdfont
+        text="",
+        # It is not widgetFont because it needs to be a nerdfont
+        fonts="Hack Nerd Font Mono",
         foreground=colors[fg],
         background=colors[0],
         padding=0,
-        fontsize=38
+        fontsize=sepFSize
     )
+
 
 def rightsep(fg):
     return widget.TextBox(
-        text="\ue0b4",
-        fonts="Hack Nerd Font Mono",    # It is not widgetFont because it needs to be a nerdfont
+        text="",
+        # It is not widgetFont because it needs to be a nerdfont
+        fonts="Hack Nerd Font Mono",
         foreground=colors[fg],
         background=colors[0],
         padding=0,
-        fontsize=38
+        fontsize=sepFSize
     )
 
 
@@ -54,7 +61,7 @@ def parse_win_name(txt):
 # Widget default options
 widget_defaults = {
     'font': widgetFont,
-    'fontsize': 13,
+    'fontsize': widgetFSize,
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()
@@ -65,7 +72,7 @@ widgets = [
     leftsep(4),
     widget.Clock(
         font=widgetFont,
-        fontsize=16,
+        fontsize=widgetFSize,
         foreground=colors[5],
         background=colors[4],
         format='%d %b | %A'
@@ -105,7 +112,7 @@ widgets = [
         background=colors[4],
         foreground=colors[5],
         font=widgetFont,
-        fontsize=15,
+        fontsize=widgetFSize,
     ),
     rightsep(4),
 
@@ -116,6 +123,7 @@ widgets = [
         cursor=False,
         # cursor_color=colors[4],   #Da problemas
         font=widgetFont,
+        fontsize=widgetFSize,
         prompt='> ',
     ),
 
@@ -140,75 +148,68 @@ widgets = [
     sep(),
 
     leftsep(4),
+    widget.TextBox(
+        text="墳 ",
+        # It is not widgetFont because it needs to be a nerdfont
+        fonts="Hack Nerd Font Mono",
+        background=colors[4],
+        foreground=colors[5],
+        padding=0,
+        fontsize=sepFSize
+    ),
     widget.Volume(
         background=colors[4],
         foreground=colors[5],
         font=widgetFont,
-        fontsize=16,
+        fontsize=widgetFSize,
         # mouse_callbacks={'Button3': lambda: qtile.cmd_spawn("pavucontrol")},
-        # update_interval=0.001,
+        update_interval=0.2,
     ),
     rightsep(4),
 
     sep(),
 
-    # leftsep(3),
-    # widget.TextBox(
-    #     text="",
-    #     foreground=colors[5],
-    #     background=colors[3],
-    #     padding=0,
-    #     fontsize=38
-    # ),
-    # widget.CPU(
-    #     background=colors[3],
-    #     foreground=colors[5],
-    #     format=' {load_percent}%',
-    #     font=widgetFont,
-    #     fontsize=16
-    # ),
-    # sep(6,3),
-    # rightsep(3),
-
-    # sep(),
-
     leftsep(4),
-    sep(3,4),
-    widget.Battery(
+    sep(3, 4),
+    widget.Battery(     # Batery Icon
         foreground=colors[5],
+        low_foreground=colors[6],
         background=colors[4],
-        fontsize=24,
-        low_percentage=0.2,
-        low_foreground=colors[5],
-        font="lekton nerd font",
-        update_interval=1,
+        font="Hack Nerd Font Mono",  # Needs to be nerd font
+        fontsize=30,
         format='{char}',
-        charge_char='ﮣ',
-        discharge_char=' ',
+        update_interval=0.5,
+        low_percentage=0.15,
+        charge_char='',
+        discharge_char='',
+        empty_char='',
+        full_char='',
+        unknown_char='',  # unknown = full in my pc lol
     ),
-    sep(2,4),
-    widget.Battery(
-        background=colors[4],
+    sep(2, 4),
+    widget.Battery(     # Battery percentage
         foreground=colors[5],
-        charge_char='↑',
-        discharge_char='↓',
+        low_foreground=colors[6],
+        background=colors[4],
         font=widgetFont,
-        fontsize=16,
-        update_interval=1,
-        format='{percent:2.0%}'
+        fontsize=widgetFSize,
+        format='{percent:2.0%}',
+        update_interval=0.5,
+        low_percentage=0.9,
     ),
     rightsep(4),
 
     sep(),
 
     leftsep(4),
-    sep(6,4),
+    sep(6, 4),
+    # https://pythonexamples.org/python-datetime-format/
     widget.Clock(
         background=colors[4],
         foreground=colors[5],
         font=widgetFont,
-        fontsize=16,
-        format='%I:%M %p',
+        fontsize=widgetFSize,
+        format='%H:%M:%S ',
     ),
     rightsep(4),
 ]

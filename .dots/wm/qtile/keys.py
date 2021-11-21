@@ -20,7 +20,7 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod, "control"], "q", lazy.shutdown()),
 
     # Spawn applications
-
+    (["control", "mod1"], "t",   lazy.spawn("alacritty")),
     ([mod], "Return",   lazy.spawn("alacritty")),
     ([mod], "b",   lazy.spawn("firefox")),
     ([mod], "d",   lazy.spawn("discord")),
@@ -28,6 +28,7 @@ keys = [Key(t[0], t[1], *t[2:]) for t in [
     ([mod], "g",   lazy.spawn("lutris")),
     ([mod], "m",   lazy.spawn("spotblock"), lazy.spawn("spotify")),
     ([mod], "z",   lazy.spawn("zathura")),
+    ([mod], "z",   lazy.spawn("kdeconnect-app")),
 
     # Switch between layouts
     ([mod],          "Tab",    lazy.next_layout()),
